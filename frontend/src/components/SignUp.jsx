@@ -105,4 +105,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUP;
+export default SignUp;

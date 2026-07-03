@@ -17,20 +17,8 @@ connectDb()
 
 const app=express()
 
-const allowedOrigins = [
-    process.env.FRONTEND_URL,
-    "https://ai-virtual-assistant-12.onrender.com",
-    "http://localhost:5173"
-].filter(Boolean);
-
 app.use(cors({
-    origin: (origin, callback) => {
-        if (!origin || allowedOrigins.includes(origin) || !process.env.FRONTEND_URL) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    },
+    origin: true,
     credentials: true
 }))
 const port=process.env.PORT || 5000

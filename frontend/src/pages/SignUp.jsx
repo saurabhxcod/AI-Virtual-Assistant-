@@ -29,7 +29,7 @@ try {
   console.log(error)
   setUserData(null)
   setLoading(false)
-  setErr(error.response.data.message)
+  setErr(error.response?.data?.message || "Network error. Please make sure the backend is running.")
 }
     }
   return (

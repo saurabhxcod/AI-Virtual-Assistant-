@@ -1,3 +1,7 @@
+import dns from "dns"
+// Set Node.js to use Google DNS to prevent querySrv DNS resolution failures locally
+dns.setServers(["8.8.8.8", "8.8.4.4"])
+
 import express from "express"
 import dotenv from "dotenv"
 dotenv.config()
